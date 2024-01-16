@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text to Image Generator</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        form {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        label {
+            margin-right: 10px;
+        }
+
+        input, select, button {
+            margin-bottom: 10px;
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        input[type="submit"] {
+            background-color: #4caf50;
+            color: white;
+            cursor: pointer;
+        }
+
+        img {
+            max-width: 100%;
+            margin-top: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        button {
+            background-color: #3498db;
+            color: white;
+            padding: 8px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>Art Generate</h1>
+
+    <form action="/" method="post">
+        <label for="text">Enter Text:</label>
+        <input type="text" name="text" required>
+        <br>
+
+        <label for="style">Choose Style:</label>
+        <select name="style" required>
+            <option value="0">Anime</option>
+            <option value="1">Pixel Art</option>
+            <option value="2">Cubist</option>
+            <option value="3">Disney Cartoon</option>
+            <option value="4">Storyboard</option>
+        </select>
+        <br>
+
+        <input type="submit" value="Generate">
+    </form>
+
+    {% if generated_image_path %}
+        <h2>Generated Image:</h2>
+        <img src="{{ url_for('static', filename='generated_images/generated_image.jpg') }}" alt="Generated Image">
+
+        <br>
+
+        <button onclick="resetToDefault()">Reset to Default</button>
+    {% endif %}
+
+    <script>
+        function resetToDefault() {
+            // You can add logic here to reset to default state
+            history.back()
+            
+        }
+    </script>
+</body>
+</html>
