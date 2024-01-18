@@ -1,4 +1,3 @@
-#Pre-vizArt
 The application of this project is to previz prompt-based generated artwork images using an AR mobile application. This is the fist step to this idea. In this current version, there are 5 styles of images you can generate. 
 
 1. Anime    
