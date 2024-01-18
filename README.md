@@ -6,4 +6,4 @@ The application of this project is to previz prompt-based generated artwork imag
 4. Disney Cartoon
 5. Storyboard
 
-I aim to extend this project further by adding many more styles of images and complete building the mobile application. You can access the current prototype version here 18.222.170.46:1000. It's hosted on AWS, so I may take it down in the future. Please note that there may be some bugs that don't cause images to generate, please give a different prompt if this happens. 
+I aim to extend this project further by adding many more styles of images and complete building the mobile application. You can access the current prototype version here http://18.222.170.46:1000. It's hosted on AWS, so I may take it down in the future. Please note that there may be some bugs that don't cause images to generate, please give a different prompt if this happens. 
